@@ -56,7 +56,6 @@ def getScore(particule):
     if (particule.get_onPath() > (int) (MOVE_COUNT * 0.9)):
         score += 5000
     score +=  particule.get_onPath() * 0 + particule.score[0] * 2000 - getDistance(particule, path.get_corners()[particule.score[0]])
-    print(particule.score[0], score)
     return [particule.score[0], score]
 
 def updateparticules(moveNumber):
